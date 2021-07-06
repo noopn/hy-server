@@ -39,6 +39,6 @@ io.on('connection', (socket) => {
   })
 });
 
-server.listen(3001, () => {
-  console.log('socket server in 3001 port')
+server.listen(9348, () => {
+  console.log('socket server in 9348 port')
 });
