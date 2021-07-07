@@ -14,4 +14,4 @@ RUN npm install
  
 EXPOSE 9348
 
-CMD ["npm","run","server"]
+CMD ["npm","run","prod-server"]
