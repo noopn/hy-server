@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "pm2 start ecosystem.config.js",
+    "prod-server": "pm2-runtime ecosystem.config.js",
     "server-stop":"pm2 stop ecosystem.config.js",
     "server-init":"pm2 init simple"
   },
