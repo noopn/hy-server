@@ -2,7 +2,7 @@ const redis = require('redis');
 
 console.log(process.env)
 
-const client = redis.createClient(6379, process.env.HY_server === 'server' ? 'redis' : 'localhost');
+const client = redis.createClient(6379, 'redis');
 
 client.on("ready", function (err) {
   if (err) {
