@@ -25,11 +25,11 @@ io.on('connection', (socket) => {
     get('mode')
       .then(m => {
         console.log('redis取到mode为', m)
-        io.emit('mode', {
+        io.sockets.emit('mode', {
           mode: m
         });
       }).catch(err => {
-        io.emit('mode', {
+        io.sockets.emit('mode', {
           mode: err
         });
       })
