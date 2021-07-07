@@ -2,7 +2,7 @@ module.exports = {
   apps: [{
     "name": "hy-server",
     "script": "./src/server.js",
-    "instances": 4,
+    "instances": 1,
     "exec_mode": "cluster"
   }]
 }
