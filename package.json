@@ -6,16 +6,16 @@
   "scripts": {
     "server": "pm2 start ecosystem.config.js",
     "prod-server": "pm2-runtime ecosystem.config.js",
-    "server-stop":"pm2 stop ecosystem.config.js",
-    "server-init":"pm2 init simple"
+    "server-stop": "pm2 stop ecosystem.config.js",
+    "server-init": "pm2 init simple"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@socket.io/pm2": "^5.1.0",
     "koa": "^2.13.1",
     "pm2": "^5.1.0",
-    "redis": "^3.1.2",
-    "socket.io": "^4.1.2"
+    "redis": "^3.1.2"
   }
 }

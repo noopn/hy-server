@@ -5,8 +5,13 @@ const {
   set
 } = require('./redis');
 const server = require('http').createServer(app.callback());
+const { createAdapter } = require("@socket.io/cluster-adapter");
+const { setupWorker } = require("@socket.io/sticky");
+const { Server } = require("socket.io");
+const io = new Server(server);
 
-const io = require('socket.io')(server);
+io.adapter(createAdapter());
+setupWorker(io);
 
 io.on('connection', (socket) => {
   console.log('用户连接上服务器')
