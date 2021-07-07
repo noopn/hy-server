@@ -8,7 +8,7 @@ const server = require('http').createServer(app.callback());
 
 const io = require('socket.io')(server);
 
-io.sockets.on('connection', (socket) => {
+io.on('connection', (socket) => {
   console.log('用户连接上服务器')
   // 向新链接的页面通知当前模式
   get('mode').then(mode => {
