@@ -9,7 +9,7 @@ ENV HY_SERVER server
 
 WORKDIR /socket-server
 
-RUN npm config set registry http://r.cnpmjs.org/
+RUN npm config set registry http://registry.npmjs.eu/
 
 RUN npm install
 
