@@ -9,6 +9,8 @@ ENV HY_SERVER server
 
 WORKDIR /socket-server
 
+RUN npm config set registry http://registry.npm.taobao.org
+
 RUN npm install
 
  
