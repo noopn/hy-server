@@ -1,8 +1,11 @@
 const redis = require('redis');
 
-console.log(process.env)
 
-const client = redis.createClient(6379, 'redis');
+const opts = {
+	auth_pass: 9348
+}
+
+const client = redis.createClient(6379, 'redis', opts);
 
 client.on("ready", function (err) {
   if (err) {
